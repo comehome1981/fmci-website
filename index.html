@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>FMCI Web App — Finite Markov Chain Imbedding Calculator</title>
 <style>
   :root {
@@ -548,418 +549,428 @@
     .section-heading h3 { font-size: 26px; }
     .site-footer { padding: 22px 24px; }
   }
+
+  /* ===== VISIT COUNTER ===== */
+  .visit-counter {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 11px;
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 10px;
+    background: rgba(0, 21, 56, 0.94);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .visit-counter img {
+    display: block;
+    height: 20px;
+    width: auto;
+  }
+  @media (max-width: 620px) {
+    .visit-counter {
+      right: 10px;
+      bottom: 10px;
+    }
+  }
+
+  /* ===== APP LAUNCH COUNTER ===== */
+  .launch-counter {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 13px;
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 10px;
+    background: rgba(0, 21, 56, 0.95);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.20);
+    color: #fff;
+    font-size: 12.5px;
+    font-weight: 700;
+  }
+  .launch-counter strong {
+    min-width: 20px;
+    text-align: center;
+    color: #AFCBFF;
+    font-size: 14px;
+  }
+  @media (max-width: 620px) {
+    .launch-counter {
+      right: 10px;
+      bottom: 10px;
+    }
+  }
 </style>
 </head>
 <body id="top">
-
-  <!-- ===== NAVBAR ===== -->
-  <nav class="navbar">
-    <div class="brand">
-      <svg class="brand-icon" viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="22" stroke="#2F7BF6" stroke-width="2"/>
-        <circle cx="24" cy="10" r="3.2" fill="#2F7BF6"/>
-        <circle cx="38" cy="24" r="3.2" fill="#2F7BF6"/>
-        <circle cx="24" cy="38" r="3.2" fill="#2F7BF6"/>
-        <circle cx="10" cy="24" r="3.2" fill="#2F7BF6"/>
-        <circle cx="24" cy="24" r="3.6" fill="#fff"/>
-        <line x1="24" y1="10" x2="24" y2="24" stroke="#2F7BF6" stroke-width="1.6"/>
-        <line x1="38" y1="24" x2="24" y2="24" stroke="#2F7BF6" stroke-width="1.6"/>
-        <line x1="24" y1="38" x2="24" y2="24" stroke="#2F7BF6" stroke-width="1.6"/>
-        <line x1="10" y1="24" x2="24" y2="24" stroke="#2F7BF6" stroke-width="1.6"/>
-      </svg>
-      <div class="brand-text">
-        <h1>FMCI Web App</h1>
-        <p>Finite Markov Chain Imbedding Calculator</p>
-      </div>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#top" class="active">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#methods">Methods</a></li>
-      <li><a href="#applications">Applications</a></li>
-      <li><a href="#help">Help</a></li>
-    </ul>
-    <a href="https://desktop-6ub17o1.taila08346.ts.net/webapps/home/session.html?app=WuWebAppDesignerWeb2" class="btn-launch-nav">
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+<div class="brand">
+<svg class="brand-icon" fill="none" viewbox="0 0 48 48">
+<circle cx="24" cy="24" r="22" stroke="#2F7BF6" stroke-width="2"></circle>
+<circle cx="24" cy="10" fill="#2F7BF6" r="3.2"></circle>
+<circle cx="38" cy="24" fill="#2F7BF6" r="3.2"></circle>
+<circle cx="24" cy="38" fill="#2F7BF6" r="3.2"></circle>
+<circle cx="10" cy="24" fill="#2F7BF6" r="3.2"></circle>
+<circle cx="24" cy="24" fill="#fff" r="3.6"></circle>
+<line stroke="#2F7BF6" stroke-width="1.6" x1="24" x2="24" y1="10" y2="24"></line>
+<line stroke="#2F7BF6" stroke-width="1.6" x1="38" x2="24" y1="24" y2="24"></line>
+<line stroke="#2F7BF6" stroke-width="1.6" x1="24" x2="24" y1="38" y2="24"></line>
+<line stroke="#2F7BF6" stroke-width="1.6" x1="10" x2="24" y1="24" y2="24"></line>
+</svg>
+<div class="brand-text">
+<h1>FMCI Web App</h1>
+<p>Finite Markov Chain Imbedding Calculator</p>
+</div>
+</div>
+<ul class="nav-links">
+<li><a class="active" href="#top">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#applications">Applications</a></li>
+<li><a href="#help">Help</a></li>
+</ul>
+<a class="btn-launch-nav" href="https://desktop-6ub17o1.taila08346.ts.net/webapps/home/session.html?app=WuWebAppDesignerWeb2">
       Launch App
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
-        <path d="M7 17L17 7M9 7h8v8"/>
-      </svg>
-    </a>
-  </nav>
-
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="hero-left">
-      <h2>Finite Markov Chain Imbedding Calculator<span class="accent">for Runs and Patterns</span></h2>
-      <div class="hero-divider"></div>
-      <p class="lead">Compute exact probabilities for runs, patterns, scan statistics, matching events, and Cochran-type tests using <strong>finite Markov chain imbedding</strong> methods.</p>
-
-      <div class="features-row">
-        <div class="feature-item">
-          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 2L4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z"/>
-            <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <div>
-            <h4>Exact Calculations</h4>
-            <p>Exact probability computations</p>
-          </div>
-        </div>
-        <div class="feature-item">
-          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="3" width="18" height="18" rx="2"/>
-            <path d="M3 9h18M9 21V9"/>
-          </svg>
-          <div>
-            <h4>Flexible Models</h4>
-            <p>Independent or Markov-dependent trials</p>
-          </div>
-        </div>
-        <div class="feature-item">
-          <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 20h18M6 20V10M12 20V4M18 20v-7" stroke-linecap="round"/>
-          </svg>
-          <div>
-            <h4>Research Ready</h4>
-            <p>Built for researchers, students, and practitioners</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-cta-row">
-        <a href="https://desktop-6ub17o1.taila08346.ts.net/webapps/home/session.html?app=WuWebAppDesignerWeb2" class="btn-launch-hero">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
-            <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
-            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
-            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
-          </svg>
+      <svg fill="none" height="14" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24" width="14">
+<path d="M7 17L17 7M9 7h8v8"></path>
+</svg>
+</a>
+</nav>
+<!-- ===== HERO ===== -->
+<section class="hero">
+<div class="hero-left">
+<h2>Finite Markov Chain Imbedding Calculator<span class="accent">for Runs and Patterns</span></h2>
+<div class="hero-divider"></div>
+<p class="lead">Compute exact probabilities for runs, patterns, scan statistics, matching events, and Cochran-type tests using <strong>finite Markov chain imbedding</strong> methods.</p>
+<div class="hero-cta-row">
+<a class="btn-launch-hero" href="https://desktop-6ub17o1.taila08346.ts.net/webapps/home/session.html?app=WuWebAppDesignerWeb2">
+<svg fill="none" height="16" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+<path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+<path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+<path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+</svg>
           Launch the FMCI Web App
         </a>
-        <div class="hero-note">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M12 16v-4M12 8h.01" stroke-linecap="round"/>
-          </svg>
+<div class="hero-note">
+<svg fill="none" height="15" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="15">
+<circle cx="12" cy="12" r="10"></circle>
+<path d="M12 16v-4M12 8h.01" stroke-linecap="round"></path>
+</svg>
           Runs in your browser. No MATLAB installation required.
         </div>
-      </div>
-    </div>
-    <div class="hero-right">
-      <div class="hero-visual-wrap">
-        <div class="hero-callout top-right">
-          <div class="callout-icon-row">
-            <span class="callout-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 20h18M6 16l3-4 3 2 5-8 1 2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
-            <h5>Process Monitoring</h5>
-          </div>
-          <svg class="callout-chart" viewBox="0 0 120 36" fill="none">
-            <polyline points="4,29 20,27 34,24 47,25 60,18 74,20 88,11 104,13 116,8" stroke="#125DDC" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            <line x1="4" y1="31" x2="116" y2="31" stroke="#D7E2F7" stroke-width="1.2"/>
-          </svg>
-          <p>Longest-run and scan-statistic ideas are used for exact monitoring and change detection.</p>
-        </div>
+</div>
+</div>
+<div class="hero-right">
+<div class="hero-visual-wrap">
+<div class="hero-callout top-right">
+<div class="callout-icon-row">
+<span class="callout-icon">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M3 20h18M6 16l3-4 3 2 5-8 1 2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</span>
+<h5>Process Monitoring</h5>
+</div>
+<svg class="callout-chart" fill="none" viewbox="0 0 120 36">
+<polyline fill="none" points="4,29 20,27 34,24 47,25 60,18 74,20 88,11 104,13 116,8" stroke="#125DDC" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<line stroke="#D7E2F7" stroke-width="1.2" x1="4" x2="116" y1="31" y2="31"></line>
+</svg>
+<p>Longest-run and scan-statistic ideas are used for exact monitoring and change detection.</p>
+</div>
+<div class="laptop">
+<div class="laptop-screen">
+<div class="laptop-screen-inner">
+<div class="app-sidebar">
+<div class="app-title">FMCI Web App</div>
+<div class="item">Home</div>
+<div class="item">Waiting Time</div>
+<div class="item">Patterns</div>
+<div class="item">Scan Stat</div>
+<div class="item">Longest Run</div>
+<div class="item">Cochran's Test</div>
+</div>
+<div class="app-main">
+<div class="mini-card"><div class="label">Waiting Time</div>
+<svg viewbox="0 0 60 24"><polyline fill="none" points="0,20 10,15 20,17 30,8 40,10 50,4 60,2" stroke="#2F7BF6" stroke-width="2"></polyline></svg>
+</div>
+<div class="mini-card"><div class="label">Number of Patterns</div>
+<svg viewbox="0 0 60 24"><polyline fill="none" points="0,18 10,16 20,19 30,12 40,14 50,7 60,9" stroke="#F4923B" stroke-width="2"></polyline></svg>
+</div>
+<div class="mini-card"><div class="label">Scan Statistic</div>
+<svg viewbox="0 0 60 24"><polyline fill="none" points="0,10 10,14 20,6 30,16 40,9 50,18 60,11" stroke="#7C6FEB" stroke-width="2"></polyline></svg>
+</div>
+<div class="mini-card"><div class="label">Longest Run</div>
+<svg viewbox="0 0 60 24"><rect fill="#9DBBF6" height="12" width="6" x="2" y="10"></rect><rect fill="#2F7BF6" height="18" width="6" x="12" y="4"></rect><rect fill="#9DBBF6" height="8" width="6" x="22" y="14"></rect><rect fill="#2F7BF6" height="14" width="6" x="32" y="8"></rect><rect fill="#9DBBF6" height="10" width="6" x="42" y="12"></rect></svg>
+</div>
+<div class="mini-card"><div class="label">Number of Runs</div>
+<svg viewbox="0 0 60 24"><polyline fill="none" points="0,16 10,10 20,14 30,4 40,12 50,6 60,10" stroke="#0EAFC6" stroke-width="2"></polyline></svg>
+</div>
+<div class="mini-card"><div class="label">Matching Probability</div>
+<svg viewbox="0 0 60 24"><polyline fill="none" points="0,20 10,16 20,17 30,10 40,11 50,5 60,6" stroke="#E8579E" stroke-width="2"></polyline></svg>
+</div>
+<div class="mini-card"><div class="label">Cochran's Test</div>
+<svg viewbox="0 0 60 24"><polyline fill="none" points="0,18 10,13 20,15 30,7 40,9 50,3 60,5" stroke="#E8A23B" stroke-width="2"></polyline></svg>
+</div>
+</div>
+</div>
+</div>
+<div class="laptop-base"></div>
+</div>
+<div class="hero-callout bottom-left">
+<div class="callout-icon-row">
+<span class="callout-icon">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"></path>
+<path d="M8 4v16M16 4v16" opacity=".55" stroke-linecap="round"></path>
+</svg>
+</span>
+<h5>Genomics / CNV</h5>
+</div>
+<svg class="callout-cnv" fill="none" viewbox="0 0 120 36">
+<rect fill="#DCE8FE" height="18" rx="4" width="18" x="4" y="9"></rect>
+<rect fill="#2F7BF6" height="18" rx="4" width="14" x="24" y="9"></rect>
+<rect fill="#DCE8FE" height="18" rx="4" width="10" x="40" y="9"></rect>
+<rect fill="#2F7BF6" height="18" rx="4" width="22" x="52" y="9"></rect>
+<rect fill="#DCE8FE" height="18" rx="4" width="12" x="76" y="9"></rect>
+<rect fill="#2F7BF6" height="18" rx="4" width="26" x="90" y="9"></rect>
+</svg>
+<p>Scan statistics and run-based summaries can help detect clustered signals and copy-number variation regions.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== ABOUT ===== -->
+<section class="content-section alt" id="about">
+<div class="section-inner">
+<div class="section-heading">
+<span class="section-kicker">About FMCI</span>
+<h3>Exact probability calculations for structured sequence events</h3>
+<p>Finite Markov chain imbedding converts a runs, patterns, or scan-statistic problem into transitions among a finite collection of states, allowing probabilities to be calculated recursively and exactly.</p>
+</div>
+<div class="about-grid">
+<div class="about-panel">
+<h4>What this web app does</h4>
+<p>The FMCI Web App provides a browser-based interface for studying events in binary sequences under independent-trial and Markov-dependent models. It supports waiting times, pattern counts, scan statistics, longest runs, numbers of runs, matching probabilities, and Cochran-type testing.</p>
+<p>The app is intended for students learning probability, researchers developing exact methods, and practitioners who need interpretable alternatives to simulation or large-sample approximations.</p>
+<p>Each module guides the user from model specification to an exact probability, distribution, or testing result.</p>
+</div>
+<div class="principles-grid">
+<div class="info-card"><span class="number-badge">1</span><h4>Define the event</h4><p>Specify the run, pattern, window, match, or test statistic of interest.</p></div>
+<div class="info-card"><span class="number-badge">2</span><h4>Choose a model</h4><p>Use independent Bernoulli trials or a Markov-dependent sequence where supported.</p></div>
+<div class="info-card"><span class="number-badge">3</span><h4>Build finite states</h4><p>Track only the sequence information needed to determine progress toward the event.</p></div>
+<div class="info-card"><span class="number-badge">4</span><h4>Compute exactly</h4><p>Propagate state probabilities to obtain the requested distribution or tail probability.</p></div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== TOOLS SECTION ===== -->
+<section class="tools-section" id="methods">
+<h3>Powerful Tools in One App</h3>
+<p>Choose a module below to get started. Each tool includes detailed instructions and examples.</p>
+<div class="tools-grid">
+<div class="tool-card">
+<div class="tool-icon icon-purple">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2" stroke-linecap="round"></path></svg>
+</div>
+<h4>Waiting Time</h4>
+<p>Probability that the waiting time for a pattern occurrence exceeds n.</p>
+<a class="learn-more" href="https://comehome1981.github.io/fmci-website/modules/waiting-time.html">Learn more <svg fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="tool-card">
+<div class="tool-icon icon-green">
+<svg fill="currentColor" viewbox="0 0 24 24"><circle cx="6" cy="6" r="2"></circle><circle cx="12" cy="6" r="2"></circle><circle cx="18" cy="6" r="2"></circle><circle cx="6" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="18" cy="12" r="2"></circle><circle cx="6" cy="18" r="2"></circle><circle cx="12" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle></svg>
+</div>
+<h4>Number of Patterns</h4>
+<p>Probability calculations for the number of pattern occurrences.</p>
+<a class="learn-more" href="https://comehome1981.github.io/fmci-website/modules/number-of-patterns.html">Learn more <svg fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="tool-card">
+<div class="tool-icon icon-blue">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.35-4.35" stroke-linecap="round"></path></svg>
+</div>
+<h4>Scan Statistic</h4>
+<p>Exact probabilities for scan statistics in binary sequences.</p>
+<a class="learn-more" href="https://comehome1981.github.io/fmci-website/modules/scan-statistic.html">Learn more <svg fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="tool-card">
+<div class="tool-icon icon-orange">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4 17l6-6 4 4 6-8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15 7h5v5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+<h4>Longest Run</h4>
+<p>Distribution calculations for the longest run of a selected state.</p>
+<a class="learn-more" href="https://comehome1981.github.io/fmci-website/modules/longest-run.html">Learn more <svg fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="tool-card">
+<div class="tool-icon icon-teal">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"></path></svg>
+</div>
+<h4>Number of Runs</h4>
+<p>Distribution calculations for the number of success runs, failure runs, or total runs.</p>
+<a class="learn-more" href="https://comehome1981.github.io/fmci-website/modules/number-of-runs.html">Learn more <svg fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="tool-card">
+<div class="tool-icon icon-pink">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M9 17H7a5 5 0 0 1 0-10h2M15 7h2a5 5 0 0 1 0 10h-2M8 12h8"></path></svg>
+</div>
+<h4>Matching Probability</h4>
+<p>Probability calculations for matching patterns between two sequences.</p>
+<a class="learn-more" href="https://comehome1981.github.io/fmci-website/modules/matching-probability.html">Learn more <svg fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="tool-card">
+<div class="tool-icon icon-amber">
+<svg fill="currentColor" viewbox="0 0 24 24"><rect height="9" rx="1" width="4" x="3" y="12"></rect><rect height="14" rx="1" width="4" x="10" y="7"></rect><rect height="18" rx="1" width="4" x="17" y="3"></rect></svg>
+</div>
+<h4>Cochran's Test</h4>
+<p>Exact p-value, type I error, and type II error calculations for Cochran-type testing.</p>
+<a class="learn-more" href="https://comehome1981.github.io/fmci-website/modules/cochran-test.html">Learn more <svg fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+</section>
+<!-- ===== APPLICATIONS ===== -->
+<section class="content-section alt" id="applications">
+<div class="section-inner">
+<div class="section-heading">
+<span class="section-kicker">Applications</span>
+<h3>Where finite Markov chain imbedding is useful</h3>
+<p>FMCI is especially valuable when the order and local structure of observations matter and an exact finite-sample probability is preferred over an approximation.</p>
+</div>
+<div class="applications-grid">
+<article class="application-card">
+<h4>Statistical process monitoring</h4>
+<p>Runs and scan statistics can detect sustained shifts, clustering, or unusual local concentrations in process observations while preserving exact finite-sample probabilities.</p>
+<span class="module-tag">Longest Run</span><span class="module-tag">Scan Statistic</span><span class="module-tag">Number of Runs</span>
+</article>
+<article class="application-card">
+<h4>Genomic sequences and CNV analysis</h4>
+<p>Binary or categorized genomic measurements can be studied for unusually long segments, clustered signals, recurring patterns, or regions associated with copy-number variation (CNV).</p>
+<span class="module-tag">Scan Statistic</span><span class="module-tag">Longest Run</span><span class="module-tag">Number of Patterns</span>
+</article>
+<article class="application-card">
+<h4>Reliability and consecutive events</h4>
+<p>Runs represent consecutive successes or failures, making FMCI useful for reliability systems, alarm sequences, streaks, and threshold rules based on repeated events.</p>
+<span class="module-tag">Longest Run</span><span class="module-tag">Number of Runs</span><span class="module-tag">Waiting Time</span>
+</article>
+<article class="application-card">
+<h4>Sequence agreement and matching</h4>
+<p>Exact matching probabilities help quantify agreement, coincidence, or aligned similarities between two binary sequences under specified dependence assumptions.</p>
+<span class="module-tag">Matching Probability</span>
+</article>
+<article class="application-card">
+<h4>Exact testing and experimental analysis</h4>
+<p>Finite-state calculations can deliver exact p-values and error probabilities when asymptotic approximations may be unreliable, including Cochran-type procedures.</p>
+<span class="module-tag">Cochran's Test</span>
+</article>
+</div>
+</div>
+</section>
+<!-- ===== TRUST BAR ===== -->
+<!-- ===== HELP ===== -->
+<section class="content-section" id="help">
+<div class="section-inner">
+<div class="section-heading">
+<span class="section-kicker">Help</span>
+</div>
+<div class="help-layout">
+<div class="help-stack">
+<div class="help-card">
+<h4>Common issues</h4>
+<p><strong>The app does not open:</strong> the hosting address may be unavailable or the MATLAB Web App Server may be offline. Contact the maintainer using the email address shown here.</p>
+<p style="margin-top:10px;"><strong>An input is rejected:</strong> verify the module guide, parameter ranges, dimensions of transition matrices, and the relationship among sequence length, run length, and window size.</p>
+<p style="margin-top:10px;"><strong>The result is unexpected:</strong> confirm whether the selected model is independent or Markov-dependent and whether the requested result is a point, cumulative, or tail probability.</p>
+</div>
+</div>
+<aside class="contact-card">
+<h4>Contact and support</h4>
+<p>For questions about FMCI methods, module inputs, results, teaching use, research collaboration, or access to the web application, contact:</p>
+<a class="contact-link" href="mailto:twu@math.msstate.edu">twu@math.msstate.edu</a>
+<p style="margin-top:20px; margin-bottom:0;">When reporting a problem, include the module name, your input values, the browser used, and a screenshot or copy of any error message.</p>
+</aside>
+</div>
+</div>
+</section>
+<footer class="site-footer">
+<div class="footer-inner">
+<span>FMCI Web App — Finite Markov Chain Imbedding Calculator</span>
+<span>Contact: <a href="mailto:twu@math.msstate.edu">twu@math.msstate.edu</a></span>
+</div>
+</footer>
+<div class="launch-counter" title="Approximate number of unique browsers that launched the FMCI app"><span>App launches:</span><strong id="launch-count">—</strong></div><script>
+(() => {
+  const API_BASE =
+    "https://api.counterapi.dev/v1/fmci-web-github-io/fmci-app-unique-launchers";
+  const STORAGE_KEY = "fmciAppLaunchRecorded";
+  const countElement = document.getElementById("launch-count");
+  const launchButtons = document.querySelectorAll(
+    "a.btn-launch-nav, a.btn-launch-hero"
+  );
 
-        <div class="laptop">
-          <div class="laptop-screen">
-            <div class="laptop-screen-inner">
-              <div class="app-sidebar">
-                <div class="app-title">FMCI Web App</div>
-                <div class="item">Home</div>
-                <div class="item">Waiting Time</div>
-                <div class="item">Patterns</div>
-                <div class="item">Scan Stat</div>
-                <div class="item">Longest Run</div>
-                <div class="item">Cochran's Test</div>
-              </div>
-              <div class="app-main">
-                <div class="mini-card"><div class="label">Waiting Time</div>
-                  <svg viewBox="0 0 60 24"><polyline points="0,20 10,15 20,17 30,8 40,10 50,4 60,2" fill="none" stroke="#2F7BF6" stroke-width="2"/></svg>
-                </div>
-                <div class="mini-card"><div class="label">Number of Patterns</div>
-                  <svg viewBox="0 0 60 24"><polyline points="0,18 10,16 20,19 30,12 40,14 50,7 60,9" fill="none" stroke="#F4923B" stroke-width="2"/></svg>
-                </div>
-                <div class="mini-card"><div class="label">Scan Statistic</div>
-                  <svg viewBox="0 0 60 24"><polyline points="0,10 10,14 20,6 30,16 40,9 50,18 60,11" fill="none" stroke="#7C6FEB" stroke-width="2"/></svg>
-                </div>
-                <div class="mini-card"><div class="label">Longest Run</div>
-                  <svg viewBox="0 0 60 24"><rect x="2" y="10" width="6" height="12" fill="#9DBBF6"/><rect x="12" y="4" width="6" height="18" fill="#2F7BF6"/><rect x="22" y="14" width="6" height="8" fill="#9DBBF6"/><rect x="32" y="8" width="6" height="14" fill="#2F7BF6"/><rect x="42" y="12" width="6" height="10" fill="#9DBBF6"/></svg>
-                </div>
-                <div class="mini-card"><div class="label">Number of Runs</div>
-                  <svg viewBox="0 0 60 24"><polyline points="0,16 10,10 20,14 30,4 40,12 50,6 60,10" fill="none" stroke="#0EAFC6" stroke-width="2"/></svg>
-                </div>
-                <div class="mini-card"><div class="label">Matching Probability</div>
-                  <svg viewBox="0 0 60 24"><polyline points="0,20 10,16 20,17 30,10 40,11 50,5 60,6" fill="none" stroke="#E8579E" stroke-width="2"/></svg>
-                </div>
-                <div class="mini-card"><div class="label">Cochran's Test</div>
-                  <svg viewBox="0 0 60 24"><polyline points="0,18 10,13 20,15 30,7 40,9 50,3 60,5" fill="none" stroke="#E8A23B" stroke-width="2"/></svg>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="laptop-base"></div>
-        </div>
+  function extractCount(data) {
+    if (typeof data === "number") return data;
+    if (!data || typeof data !== "object") return null;
+    const possibleKeys = ["count", "value", "result"];
+    for (const key of possibleKeys) {
+      if (typeof data[key] === "number") return data[key];
+      if (typeof data[key] === "string" && /^\d+$/.test(data[key])) {
+        return Number(data[key]);
+      }
+    }
+    return null;
+  }
 
-        <div class="hero-callout bottom-left">
-          <div class="callout-icon-row">
-            <span class="callout-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/>
-                <path d="M8 4v16M16 4v16" stroke-linecap="round" opacity=".55"/>
-              </svg>
-            </span>
-            <h5>Genomics / CNV</h5>
-          </div>
-          <svg class="callout-cnv" viewBox="0 0 120 36" fill="none">
-            <rect x="4" y="9" width="18" height="18" rx="4" fill="#DCE8FE"/>
-            <rect x="24" y="9" width="14" height="18" rx="4" fill="#2F7BF6"/>
-            <rect x="40" y="9" width="10" height="18" rx="4" fill="#DCE8FE"/>
-            <rect x="52" y="9" width="22" height="18" rx="4" fill="#2F7BF6"/>
-            <rect x="76" y="9" width="12" height="18" rx="4" fill="#DCE8FE"/>
-            <rect x="90" y="9" width="26" height="18" rx="4" fill="#2F7BF6"/>
-          </svg>
-          <p>Scan statistics and run-based summaries can help detect clustered signals and copy-number variation regions.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  async function refreshCount() {
+    try {
+      const response = await fetch(API_BASE, { cache: "no-store" });
+      if (!response.ok) throw new Error("Counter request failed");
+      const data = await response.json();
+      const count = extractCount(data);
+      if (count !== null) countElement.textContent = count.toLocaleString();
+    } catch (error) {
+      countElement.textContent = "—";
+    }
+  }
 
+  async function recordLaunchOnce() {
+    if (localStorage.getItem(STORAGE_KEY) === "yes") return;
 
-  <!-- ===== ABOUT ===== -->
-  <section class="content-section alt" id="about">
-    <div class="section-inner">
-      <div class="section-heading">
-        <span class="section-kicker">About FMCI</span>
-        <h3>Exact probability calculations for structured sequence events</h3>
-        <p>Finite Markov chain imbedding converts a runs, patterns, or scan-statistic problem into transitions among a finite collection of states, allowing probabilities to be calculated recursively and exactly.</p>
-      </div>
+    try {
+      const response = await fetch(API_BASE + "/up", { cache: "no-store" });
+      if (!response.ok) throw new Error("Counter increment failed");
+      const data = await response.json();
+      localStorage.setItem(STORAGE_KEY, "yes");
+      const count = extractCount(data);
+      if (count !== null) countElement.textContent = count.toLocaleString();
+    } catch (error) {
+      // Do not block access to the app if the counter service is unavailable.
+    }
+  }
 
-      <div class="about-grid">
-        <div class="about-panel">
-          <h4>What this web app does</h4>
-          <p>The FMCI Web App provides a browser-based interface for studying events in binary sequences under independent-trial and Markov-dependent models. It supports waiting times, pattern counts, scan statistics, longest runs, numbers of runs, matching probabilities, and Cochran-type testing.</p>
-          <p>The app is intended for students learning probability, researchers developing exact methods, and practitioners who need interpretable alternatives to simulation or large-sample approximations.</p>
-          <p>Each module guides the user from model specification to an exact probability, distribution, or testing result.</p>
-        </div>
+  launchButtons.forEach((button) => {
+    button.addEventListener("click", async (event) => {
+      const destination = button.href;
+      event.preventDefault();
 
-        <div class="principles-grid">
-          <div class="info-card"><span class="number-badge">1</span><h4>Define the event</h4><p>Specify the run, pattern, window, match, or test statistic of interest.</p></div>
-          <div class="info-card"><span class="number-badge">2</span><h4>Choose a model</h4><p>Use independent Bernoulli trials or a Markov-dependent sequence where supported.</p></div>
-          <div class="info-card"><span class="number-badge">3</span><h4>Build finite states</h4><p>Track only the sequence information needed to determine progress toward the event.</p></div>
-          <div class="info-card"><span class="number-badge">4</span><h4>Compute exactly</h4><p>Propagate state probabilities to obtain the requested distribution or tail probability.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
+      await Promise.race([
+        recordLaunchOnce(),
+        new Promise((resolve) => setTimeout(resolve, 800))
+      ]);
 
-  <!-- ===== TOOLS SECTION ===== -->
-  <section class="tools-section" id="methods">
-    <h3>Powerful Tools in One App</h3>
-    <p>Choose a module below to get started. Each tool includes detailed instructions and examples.</p>
+      window.location.href = destination;
+    });
+  });
 
-    <div class="tools-grid">
-
-      <div class="tool-card">
-        <div class="tool-icon icon-purple">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg>
-        </div>
-        <h4>Waiting Time</h4>
-        <p>Probability that the waiting time for a pattern occurrence exceeds n.</p>
-        <a href="https://comehome1981.github.io/fmci-website/modules/waiting-time.html" class="learn-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-
-      <div class="tool-card">
-        <div class="tool-icon icon-green">
-          <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="6" r="2"/><circle cx="12" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="18" cy="12" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="12" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg>
-        </div>
-        <h4>Number of Patterns</h4>
-        <p>Probability calculations for the number of pattern occurrences.</p>
-        <a href="https://comehome1981.github.io/fmci-website/modules/number-of-patterns.html" class="learn-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-
-      <div class="tool-card">
-        <div class="tool-icon icon-blue">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35" stroke-linecap="round"/></svg>
-        </div>
-        <h4>Scan Statistic</h4>
-        <p>Exact probabilities for scan statistics in binary sequences.</p>
-        <a href="https://comehome1981.github.io/fmci-website/modules/scan-statistic.html" class="learn-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-
-      <div class="tool-card">
-        <div class="tool-icon icon-orange">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17l6-6 4 4 6-8" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 7h5v5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <h4>Longest Run</h4>
-        <p>Distribution calculations for the longest run of a selected state.</p>
-        <a href="https://comehome1981.github.io/fmci-website/modules/longest-run.html" class="learn-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-
-      <div class="tool-card">
-        <div class="tool-icon icon-teal">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
-        </div>
-        <h4>Number of Runs</h4>
-        <p>Distribution calculations for the number of success runs, failure runs, or total runs.</p>
-        <a href="https://comehome1981.github.io/fmci-website/modules/number-of-runs.html" class="learn-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-
-      <div class="tool-card">
-        <div class="tool-icon icon-pink">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 17H7a5 5 0 0 1 0-10h2M15 7h2a5 5 0 0 1 0 10h-2M8 12h8"/></svg>
-        </div>
-        <h4>Matching Probability</h4>
-        <p>Probability calculations for matching patterns between two sequences.</p>
-        <a href="https://comehome1981.github.io/fmci-website/modules/matching-probability.html" class="learn-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-
-      <div class="tool-card">
-        <div class="tool-icon icon-amber">
-          <svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="7" width="4" height="14" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></svg>
-        </div>
-        <h4>Cochran's Test</h4>
-        <p>Exact p-value, type I error, and type II error calculations for Cochran-type testing.</p>
-        <a href="https://comehome1981.github.io/fmci-website/modules/cochran-test.html" class="learn-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ===== APPLICATIONS ===== -->
-  <section class="content-section alt" id="applications">
-    <div class="section-inner">
-      <div class="section-heading">
-        <span class="section-kicker">Applications</span>
-        <h3>Where finite Markov chain imbedding is useful</h3>
-        <p>FMCI is especially valuable when the order and local structure of observations matter and an exact finite-sample probability is preferred over an approximation.</p>
-      </div>
-
-      <div class="applications-grid">
-        <article class="application-card">
-          <h4>Statistical process monitoring</h4>
-          <p>Runs and scan statistics can detect sustained shifts, clustering, or unusual local concentrations in process observations while preserving exact finite-sample probabilities.</p>
-          <span class="module-tag">Longest Run</span><span class="module-tag">Scan Statistic</span><span class="module-tag">Number of Runs</span>
-        </article>
-
-        <article class="application-card">
-          <h4>Genomic sequences and CNV analysis</h4>
-          <p>Binary or categorized genomic measurements can be studied for unusually long segments, clustered signals, recurring patterns, or regions associated with copy-number variation (CNV).</p>
-          <span class="module-tag">Scan Statistic</span><span class="module-tag">Longest Run</span><span class="module-tag">Number of Patterns</span>
-        </article>
-
-        <article class="application-card">
-          <h4>Reliability and consecutive events</h4>
-          <p>Runs represent consecutive successes or failures, making FMCI useful for reliability systems, alarm sequences, streaks, and threshold rules based on repeated events.</p>
-          <span class="module-tag">Longest Run</span><span class="module-tag">Number of Runs</span><span class="module-tag">Waiting Time</span>
-        </article>
-
-        <article class="application-card">
-          <h4>Sequence agreement and matching</h4>
-          <p>Exact matching probabilities help quantify agreement, coincidence, or aligned similarities between two binary sequences under specified dependence assumptions.</p>
-          <span class="module-tag">Matching Probability</span>
-        </article>
-
-        <article class="application-card">
-          <h4>Exact testing and experimental analysis</h4>
-          <p>Finite-state calculations can deliver exact p-values and error probabilities when asymptotic approximations may be unreliable, including Cochran-type procedures.</p>
-          <span class="module-tag">Cochran's Test</span>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TRUST BAR ===== -->
-  <div class="trust-wrap">
-    <div class="trust-bar">
-      <div class="trust-item">
-        <div class="trust-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 3 3 6 3s6-2 6-3v-5" /></svg>
-        </div>
-        <div>
-          <h5>For Students</h5>
-          <p>Learn and explore probability concepts with real examples.</p>
-        </div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 2v6l-5 8a3 3 0 0 0 3 4h10a3 3 0 0 0 3-4l-5-8V2M8 2h8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <div>
-          <h5>For Researchers</h5>
-          <p>Reliable tools for advanced statistical research.</p>
-        </div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-        </div>
-        <div>
-          <h5>For Practitioners</h5>
-          <p>Apply exact methods to real-world problems.</p>
-        </div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <div>
-          <h5>Trusted Methods</h5>
-          <p>Based on finite Markov chain imbedding theory.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- ===== HELP ===== -->
-  <section class="content-section" id="help">
-    <div class="section-inner">
-      <div class="section-heading">
-        <span class="section-kicker">Help</span>
-        <h3>Getting started with the FMCI Web App</h3>
-        <p>Select a module, enter the model and event parameters, run the calculation, and use the module guide to interpret the result.</p>
-      </div>
-
-      <div class="help-layout">
-        <div class="help-stack">
-          <div class="help-card">
-            <h4>Basic workflow</h4>
-            <ol class="steps">
-              <li><span>Open the web app with either Launch button.</span></li>
-              <li><span>Select the module that matches your probability question.</span></li>
-              <li><span>Enter the sequence length, success probability or transition probabilities, and event-specific settings.</span></li>
-              <li><span>Check that probabilities are between 0 and 1 and that lengths and counts are valid integers.</span></li>
-              <li><span>Run the calculation and review the probability, distribution, p-value, or error-rate output.</span></li>
-            </ol>
-          </div>
-          <div class="help-card">
-            <h4>Common issues</h4>
-            <p><strong>The app does not open:</strong> the hosting address may be unavailable or the MATLAB Web App Server may be offline. Contact the maintainer using the email address shown here.</p>
-            <p style="margin-top:10px;"><strong>An input is rejected:</strong> verify the module guide, parameter ranges, dimensions of transition matrices, and the relationship among sequence length, run length, and window size.</p>
-            <p style="margin-top:10px;"><strong>The result is unexpected:</strong> confirm whether the selected model is independent or Markov-dependent and whether the requested result is a point, cumulative, or tail probability.</p>
-          </div>
-        </div>
-
-        <aside class="contact-card">
-          <h4>Contact and support</h4>
-          <p>For questions about FMCI methods, module inputs, results, teaching use, research collaboration, or access to the web application, contact:</p>
-          <a class="contact-link" href="mailto:twu@math.msstate.edu">twu@math.msstate.edu</a>
-          <p style="margin-top:20px; margin-bottom:0;">When reporting a problem, include the module name, your input values, the browser used, and a screenshot or copy of any error message.</p>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <span>FMCI Web App — Finite Markov Chain Imbedding Calculator</span>
-      <span>Contact: <a href="mailto:twu@math.msstate.edu">twu@math.msstate.edu</a></span>
-    </div>
-  </footer>
-
-</body>
+  refreshCount();
+})();
+</script></body>
 </html>
