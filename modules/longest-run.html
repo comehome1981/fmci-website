@@ -1,46 +1,47 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Compute distributions for the longest consecutive run of a selected state or of any identical state.">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Compute distributions for the longest consecutive run of a selected state or of any identical state." name="description"/>
 <title>Longest Run — FMCI Web App Guide</title>
-<link rel="stylesheet" href="../assets/module-pages.css">
+<link href="../assets/module-pages.css" rel="stylesheet"/>
 </head>
 <body>
 <header class="topbar">
-  <nav class="nav">
-    <a class="brand" href="../index.html"><span class="brand-mark"></span><span>FMCI Web App</span></a>
-    <div class="navlinks"><a href="../index.html">Home</a><a href="../index.html#methods">All Modules</a><a class="launch" href="https://unshaven-energy-verify.ngrok-free.dev/webapps/home/session.html?app=WuWebAppDesignerWeb2" target="_blank" rel="noopener noreferrer">Launch App ↗</a></div>
-  </nav>
+<nav class="nav">
+<a class="brand" href="../index.html"><span class="brand-mark"></span><span>FMCI Web App</span></a>
+<div class="navlinks"><a href="../index.html">Home</a><a href="../index.html#methods">All Modules</a><a class="launch" href="https://desktop-6ub17o1.taila08346.ts.net/webapps/home/session.html?app=WuWebAppDesignerWeb2" rel="noopener noreferrer" target="_blank">Launch App ↗</a></div>
+</nav>
 </header>
 <section class="hero">
-  <div class="hero-inner">
-    <div>
-      <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#methods">Modules</a> / Longest Run</div>
-      <div class="eyebrow">Consecutive-state behavior</div>
-      <div class="title-row"><div class="module-icon"><svg viewBox="0 0 24 24"><path d="M4 18l5-6 4 3 7-9"/><path d="M16 6h4v4"/></svg></div><h1>Longest Run</h1></div>
-      <p class="hero-summary">Compute distributions for the longest consecutive run of a selected state or of any identical state.</p>
-      <div class="hero-actions"><a class="btn btn-primary" href="https://unshaven-energy-verify.ngrok-free.dev/webapps/home/session.html?app=WuWebAppDesignerWeb2" target="_blank" rel="noopener noreferrer">Open the Web App ↗</a><a class="btn btn-secondary" href="#guide">Read the guide ↓</a></div>
-    </div>
-    <aside class="formula-card"><div class="small">Core result</div><div class="formula">P(Lₙ &lt; L), P(Lₙ = L), and tail probabilities</div><div class="formula-note">Exact finite-sample calculations based on finite Markov chain imbedding.</div></aside>
-  </div>
+<div class="hero-inner">
+<div>
+<div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#methods">Modules</a> / Longest Run</div>
+<div class="eyebrow">Consecutive-state behavior</div>
+<div class="title-row"><div class="module-icon"><svg viewbox="0 0 24 24"><path d="M4 18l5-6 4 3 7-9"></path><path d="M16 6h4v4"></path></svg></div><h1>Longest Run</h1></div>
+<p class="hero-summary">Compute distributions for the longest consecutive run of a selected state or of any identical state.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="https://desktop-6ub17o1.taila08346.ts.net/webapps/home/session.html?app=WuWebAppDesignerWeb2" rel="noopener noreferrer" target="_blank">Open the Web App ↗</a><a class="btn btn-secondary" href="#guide">Read the guide ↓</a></div>
+</div>
+<aside class="formula-card"><div class="small">Core result</div><div class="formula">P(Lₙ &lt; L), P(Lₙ = L), and tail probabilities</div><div class="formula-note">Exact finite-sample calculations based on finite Markov chain imbedding.</div></aside>
+</div>
 </section>
 <main class="content" id="guide">
-  <div class="overview-grid">
-    <div class="overview-card"><div class="label">What it computes</div><p>P(Lₙ &lt; L), P(Lₙ = L), and tail probabilities</p></div>
-    <div class="overview-card"><div class="label">Supported models</div><p>Unconditional categorical trials and conditional binary trials</p></div>
-    <div class="overview-card"><div class="label">Main inputs</div><p>n, number of states, run threshold L, probability vector or conditional count N</p></div>
-  </div>
-  <div class="layout">
-    <aside class="toc"><h2>On this page</h2><a href="#single-window-web-app-note">Single-window web-app note</a><a href="#purpose">Purpose</a><a href="#run-modes">Run Modes</a><a href="#inputs">Inputs</a><a href="#how-to-use-the-app-unconditional-case">How To Use The App: Unconditional Case</a><a href="#how-to-use-the-app-conditional-case">How To Use The App: Conditional Case</a><a href="#understanding-the-results">Understanding The Results</a><a href="#example-1-unconditional-two-state-all-the-states">Example 1: Unconditional, Two-State, All The States</a><a href="#example-2-unconditional-three-state-selected-state">Example 2: Unconditional, Three-State, Selected State</a><a href="#example-3-unconditional-four-state-unequal-probabilities">Example 3: Unconditional, Four-State, Unequal Probabilities</a><a href="#example-4-conditional-two-state-selected-state">Example 4: Conditional, Two-State, Selected State</a><a href="#common-mistakes-to-avoid">Common Mistakes To Avoid</a><a href="#eigvalue-vector-button">Eigvalue/Vector Button</a><a href="#clearing-the-app">Clearing The App</a><a href="#closing-the-app">Closing The App</a><div class="source-files"><h2>MATLAB routines</h2><span>fmci_longest_run_dist.m</span><span>Fast_Cond_Longest_Run.m</span></div></aside>
-    <article class="guide"><section class="section-card" id="single-window-web-app-note">
-<details open>
+<div class="overview-grid">
+<div class="overview-card"><div class="label">What it computes</div><p>P(Lₙ &lt; L), P(Lₙ = L), and tail probabilities</p></div>
+<div class="overview-card"><div class="label">Supported models</div><p>Unconditional categorical trials and conditional binary trials</p></div>
+<div class="overview-card"><div class="label">Main inputs</div><p>n, number of states, run threshold L, probability vector or conditional count N</p></div>
+</div>
+<div class="layout">
+<aside class="toc"><h2>On this page</h2><a href="#single-window-web-app-note">Single-window web-app note</a><a href="#purpose">Purpose</a><a href="#run-modes">Run Modes</a><a href="#inputs">Inputs</a><a href="#how-to-use-the-app-unconditional-case">How To Use The App: Unconditional Case</a><a href="#how-to-use-the-app-conditional-case">How To Use The App: Conditional Case</a><a href="#understanding-the-results">Understanding The Results</a><a href="#example-1-unconditional-two-state-all-the-states">Example 1: Unconditional, Two-State, All The States</a><a href="#example-2-unconditional-three-state-selected-state">Example 2: Unconditional, Three-State, Selected State</a><a href="#example-3-unconditional-four-state-unequal-probabilities">Example 3: Unconditional, Four-State, Unequal Probabilities</a><a href="#example-4-conditional-two-state-selected-state">Example 4: Conditional, Two-State, Selected State</a><a href="#common-mistakes-to-avoid">Common Mistakes To Avoid</a><a href="#eigvalue-vector-button">Eigvalue/Vector Button</a><a href="#clearing-the-app">Clearing The App</a><a href="#closing-the-app">Closing The App</a><div class="source-files"><h2>MATLAB routines</h2><span>fmci_longest_run_dist.m</span><span>Fast_Cond_Longest_Run.m</span></div></aside>
+<article class="guide"><section class="section-card" id="single-window-web-app-note">
+<details open="">
 <summary>Single-window web-app note</summary>
 <div class="section-body"><p>The original desktop instructions sometimes refer to buttons that open separate input windows. In this single-window web version, enter those same values directly in the text boxes or tables on the current tab. The mathematical meaning of the inputs and outputs is unchanged.</p></div>
 </details>
 </section><section class="section-card" id="purpose">
-<details open>
+<details open="">
 <summary>Purpose</summary>
 <div class="section-body"><p>This app computes probabilities for L_n, the longest run length in a sequence of trials.</p>
 <p class="guide-label">The app supports two probability cases:</p>
@@ -193,9 +194,9 @@
 <pre class="formula-block">    The app uses:
         [pmf, cdf, F] = fmci_longest_run_dist(n, Pi, k, mode, selState)</pre>
 <pre class="formula-block">    For Selected states:
-        [pmf, cdf, F] = fmci_longest_run_dist(n, Pi, k, &#x27;&#x27;selected&#x27;&#x27;, selState)</pre>
+        [pmf, cdf, F] = fmci_longest_run_dist(n, Pi, k, ''selected'', selState)</pre>
 <pre class="formula-block">    For All the states:
-        [pmf, cdf, F] = fmci_longest_run_dist(n, Pi, k, &#x27;&#x27;all&#x27;&#x27;, [])</pre>
+        [pmf, cdf, F] = fmci_longest_run_dist(n, Pi, k, ''all'', [])</pre>
 <p class="guide-label">Conditional case:</p>
 <pre class="formula-block">    The app uses:
         probLTk = Fast_Cond_Longest_Run(n, k, N)
@@ -334,9 +335,9 @@ for state 1?</pre>
 <div class="section-body"><p>In the web app, switch tabs or close the browser page to leave the Longest Run app.</p></div>
 </details>
 </section>
-      <nav class="page-nav"><a href="scan-statistic.html"><small>Previous module</small><strong>← Scan Statistic</strong></a><a href="number-of-runs.html"><small>Next module</small><strong>Number of Runs →</strong></a></nav>
-    </article>
-  </div>
+<nav class="page-nav"><a href="scan-statistic.html"><small>Previous module</small><strong>← Scan Statistic</strong></a><a href="number-of-runs.html"><small>Next module</small><strong>Number of Runs →</strong></a></nav>
+</article>
+</div>
 </main>
 <footer class="footer">FMCI Web App module guide · <a href="../index.html">Return to the home page</a></footer>
 </body>

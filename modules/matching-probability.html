@@ -1,46 +1,47 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Compute the probability that two sequences avoid a run of k or more consecutive matching positions.">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Compute the probability that two sequences avoid a run of k or more consecutive matching positions." name="description"/>
 <title>Matching Probability — FMCI Web App Guide</title>
-<link rel="stylesheet" href="../assets/module-pages.css">
+<link href="../assets/module-pages.css" rel="stylesheet"/>
 </head>
 <body>
 <header class="topbar">
-  <nav class="nav">
-    <a class="brand" href="../index.html"><span class="brand-mark"></span><span>FMCI Web App</span></a>
-    <div class="navlinks"><a href="../index.html">Home</a><a href="../index.html#methods">All Modules</a><a class="launch" href="https://unshaven-energy-verify.ngrok-free.dev/webapps/home/session.html?app=WuWebAppDesignerWeb2" target="_blank" rel="noopener noreferrer">Launch App ↗</a></div>
-  </nav>
+<nav class="nav">
+<a class="brand" href="../index.html"><span class="brand-mark"></span><span>FMCI Web App</span></a>
+<div class="navlinks"><a href="../index.html">Home</a><a href="../index.html#methods">All Modules</a><a class="launch" href="https://desktop-6ub17o1.taila08346.ts.net/webapps/home/session.html?app=WuWebAppDesignerWeb2" rel="noopener noreferrer" target="_blank">Launch App ↗</a></div>
+</nav>
 </header>
 <section class="hero">
-  <div class="hero-inner">
-    <div>
-      <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#methods">Modules</a> / Matching Probability</div>
-      <div class="eyebrow">Two-sequence comparison</div>
-      <div class="title-row"><div class="module-icon"><svg viewBox="0 0 24 24"><path d="M9 17H7a5 5 0 0 1 0-10h2M15 7h2a5 5 0 0 1 0 10h-2M8 12h8"/></svg></div><h1>Matching Probability</h1></div>
-      <p class="hero-summary">Compute the probability that two sequences avoid a run of k or more consecutive matching positions.</p>
-      <div class="hero-actions"><a class="btn btn-primary" href="https://unshaven-energy-verify.ngrok-free.dev/webapps/home/session.html?app=WuWebAppDesignerWeb2" target="_blank" rel="noopener noreferrer">Open the Web App ↗</a><a class="btn btn-secondary" href="#guide">Read the guide ↓</a></div>
-    </div>
-    <aside class="formula-card"><div class="small">Core result</div><div class="formula">P(Lₙ &lt; k)</div><div class="formula-note">Exact finite-sample calculations based on finite Markov chain imbedding.</div></aside>
-  </div>
+<div class="hero-inner">
+<div>
+<div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#methods">Modules</a> / Matching Probability</div>
+<div class="eyebrow">Two-sequence comparison</div>
+<div class="title-row"><div class="module-icon"><svg viewbox="0 0 24 24"><path d="M9 17H7a5 5 0 0 1 0-10h2M15 7h2a5 5 0 0 1 0 10h-2M8 12h8"></path></svg></div><h1>Matching Probability</h1></div>
+<p class="hero-summary">Compute the probability that two sequences avoid a run of k or more consecutive matching positions.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="https://desktop-6ub17o1.taila08346.ts.net/webapps/home/session.html?app=WuWebAppDesignerWeb2" rel="noopener noreferrer" target="_blank">Open the Web App ↗</a><a class="btn btn-secondary" href="#guide">Read the guide ↓</a></div>
+</div>
+<aside class="formula-card"><div class="small">Core result</div><div class="formula">P(Lₙ &lt; k)</div><div class="formula-note">Exact finite-sample calculations based on finite Markov chain imbedding.</div></aside>
+</div>
 </section>
 <main class="content" id="guide">
-  <div class="overview-grid">
-    <div class="overview-card"><div class="label">What it computes</div><p>P(Lₙ &lt; k)</p></div>
-    <div class="overview-card"><div class="label">Supported models</div><p>Two independent Markov-dependent sequences with separate initial vectors and transition matrices</p></div>
-    <div class="overview-card"><div class="label">Main inputs</div><p>State count, n, match threshold k, initial distributions, transition matrices</p></div>
-  </div>
-  <div class="layout">
-    <aside class="toc"><h2>On this page</h2><a href="#single-window-web-app-note">Single-window web-app note</a><a href="#purpose">Purpose</a><a href="#main-function-used">Main Function Used</a><a href="#inputs-on-the-main-app-window">Inputs On The Main App Window</a><a href="#probability-input-buttons">Probability Input Buttons</a><a href="#initial-probability-vectors">Initial Probability Vectors</a><a href="#transition-matrices">Transition Matrices</a><a href="#how-to-use-the-app">How To Use The App</a><a href="#results-panel">Results Panel</a><a href="#eigvalue-vector-panel">Eigvalue/Vector Panel</a><a href="#example-1-two-state-markov-sequences">Example 1: Two-State Markov Sequences</a><a href="#example-2-four-state-uniform-markov-like-case">Example 2: Four-State Uniform Markov-Like Case</a><a href="#example-3-dna-style-four-state-sequences">Example 3: Dna-Style Four-State Sequences</a><a href="#common-mistakes-to-avoid">Common Mistakes To Avoid</a><a href="#clearing-the-app">Clearing The App</a><a href="#closing-the-app">Closing The App</a><div class="source-files"><h2>MATLAB routines</h2><span>fmci_matching_probability.m</span></div></aside>
-    <article class="guide"><section class="section-card" id="single-window-web-app-note">
-<details open>
+<div class="overview-grid">
+<div class="overview-card"><div class="label">What it computes</div><p>P(Lₙ &lt; k)</p></div>
+<div class="overview-card"><div class="label">Supported models</div><p>Two independent Markov-dependent sequences with separate initial vectors and transition matrices</p></div>
+<div class="overview-card"><div class="label">Main inputs</div><p>State count, n, match threshold k, initial distributions, transition matrices</p></div>
+</div>
+<div class="layout">
+<aside class="toc"><h2>On this page</h2><a href="#single-window-web-app-note">Single-window web-app note</a><a href="#purpose">Purpose</a><a href="#main-function-used">Main Function Used</a><a href="#inputs-on-the-main-app-window">Inputs On The Main App Window</a><a href="#probability-input-buttons">Probability Input Buttons</a><a href="#initial-probability-vectors">Initial Probability Vectors</a><a href="#transition-matrices">Transition Matrices</a><a href="#how-to-use-the-app">How To Use The App</a><a href="#results-panel">Results Panel</a><a href="#eigvalue-vector-panel">Eigvalue/Vector Panel</a><a href="#example-1-two-state-markov-sequences">Example 1: Two-State Markov Sequences</a><a href="#example-2-four-state-uniform-markov-like-case">Example 2: Four-State Uniform Markov-Like Case</a><a href="#example-3-dna-style-four-state-sequences">Example 3: Dna-Style Four-State Sequences</a><a href="#common-mistakes-to-avoid">Common Mistakes To Avoid</a><a href="#clearing-the-app">Clearing The App</a><a href="#closing-the-app">Closing The App</a><div class="source-files"><h2>MATLAB routines</h2><span>fmci_matching_probability.m</span></div></aside>
+<article class="guide"><section class="section-card" id="single-window-web-app-note">
+<details open="">
 <summary>Single-window web-app note</summary>
 <div class="section-body"><p>The original desktop instructions sometimes refer to buttons that open separate input windows. In this single-window web version, enter those same values directly in the text boxes or tables on the current tab. The mathematical meaning of the inputs and outputs is unchanged.</p></div>
 </details>
 </section><section class="section-card" id="purpose">
-<details open>
+<details open="">
 <summary>Purpose</summary>
 <div class="section-body"><p>This app computes the matching probability between two sequences X and Y using finite Markov chain imbedding.</p>
 <p class="guide-label">At each position t, the two sequences are compared:</p>
@@ -59,7 +60,7 @@
 <summary>Main Function Used</summary>
 <div class="section-body"><p class="guide-label">The app calls:</p>
 <pre class="formula-block">    [prob, lambda1, eta1, N, M] = ...
-        fmci_matching_probability(n, k, &#x27;markov&#x27;, distX, distY)</pre>
+        fmci_matching_probability(n, k, 'markov', distX, distY)</pre>
 <p class="guide-label">where:</p>
 <pre class="formula-block">    prob    = P(L_n &lt; k)
     lambda1 = dominant eigenvalue of the transient matrix N
@@ -293,9 +294,9 @@
 <div class="section-body"><p>In the web app, switch tabs or close the browser page to leave the Matching Probability app.</p></div>
 </details>
 </section>
-      <nav class="page-nav"><a href="number-of-runs.html"><small>Previous module</small><strong>← Number of Runs</strong></a><a href="cochran-test.html"><small>Next module</small><strong>Cochran&#x27;s Test →</strong></a></nav>
-    </article>
-  </div>
+<nav class="page-nav"><a href="number-of-runs.html"><small>Previous module</small><strong>← Number of Runs</strong></a><a href="cochran-test.html"><small>Next module</small><strong>Cochran's Test →</strong></a></nav>
+</article>
+</div>
 </main>
 <footer class="footer">FMCI Web App module guide · <a href="../index.html">Return to the home page</a></footer>
 </body>

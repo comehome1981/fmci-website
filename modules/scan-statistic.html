@@ -1,46 +1,47 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Find exact probabilities for the maximum number of successes appearing in any moving window of a binary sequence.">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Find exact probabilities for the maximum number of successes appearing in any moving window of a binary sequence." name="description"/>
 <title>Scan Statistic — FMCI Web App Guide</title>
-<link rel="stylesheet" href="../assets/module-pages.css">
+<link href="../assets/module-pages.css" rel="stylesheet"/>
 </head>
 <body>
 <header class="topbar">
-  <nav class="nav">
-    <a class="brand" href="../index.html"><span class="brand-mark"></span><span>FMCI Web App</span></a>
-    <div class="navlinks"><a href="../index.html">Home</a><a href="../index.html#methods">All Modules</a><a class="launch" href="https://unshaven-energy-verify.ngrok-free.dev/webapps/home/session.html?app=WuWebAppDesignerWeb2" target="_blank" rel="noopener noreferrer">Launch App ↗</a></div>
-  </nav>
+<nav class="nav">
+<a class="brand" href="../index.html"><span class="brand-mark"></span><span>FMCI Web App</span></a>
+<div class="navlinks"><a href="../index.html">Home</a><a href="../index.html#methods">All Modules</a><a class="launch" href="https://desktop-6ub17o1.taila08346.ts.net/webapps/home/session.html?app=WuWebAppDesignerWeb2" rel="noopener noreferrer" target="_blank">Launch App ↗</a></div>
+</nav>
 </header>
 <section class="hero">
-  <div class="hero-inner">
-    <div>
-      <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#methods">Modules</a> / Scan Statistic</div>
-      <div class="eyebrow">Moving-window cluster detection</div>
-      <div class="title-row"><div class="module-icon"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M16 16l5 5"/></svg></div><h1>Scan Statistic</h1></div>
-      <p class="hero-summary">Find exact probabilities for the maximum number of successes appearing in any moving window of a binary sequence.</p>
-      <div class="hero-actions"><a class="btn btn-primary" href="https://unshaven-energy-verify.ngrok-free.dev/webapps/home/session.html?app=WuWebAppDesignerWeb2" target="_blank" rel="noopener noreferrer">Open the Web App ↗</a><a class="btn btn-secondary" href="#guide">Read the guide ↓</a></div>
-    </div>
-    <aside class="formula-card"><div class="small">Core result</div><div class="formula">P(Sₙ(r) &lt; s)</div><div class="formula-note">Exact finite-sample calculations based on finite Markov chain imbedding.</div></aside>
-  </div>
+<div class="hero-inner">
+<div>
+<div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#methods">Modules</a> / Scan Statistic</div>
+<div class="eyebrow">Moving-window cluster detection</div>
+<div class="title-row"><div class="module-icon"><svg viewbox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M16 16l5 5"></path></svg></div><h1>Scan Statistic</h1></div>
+<p class="hero-summary">Find exact probabilities for the maximum number of successes appearing in any moving window of a binary sequence.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="https://desktop-6ub17o1.taila08346.ts.net/webapps/home/session.html?app=WuWebAppDesignerWeb2" rel="noopener noreferrer" target="_blank">Open the Web App ↗</a><a class="btn btn-secondary" href="#guide">Read the guide ↓</a></div>
+</div>
+<aside class="formula-card"><div class="small">Core result</div><div class="formula">P(Sₙ(r) &lt; s)</div><div class="formula-note">Exact finite-sample calculations based on finite Markov chain imbedding.</div></aside>
+</div>
 </section>
 <main class="content" id="guide">
-  <div class="overview-grid">
-    <div class="overview-card"><div class="label">What it computes</div><p>P(Sₙ(r) &lt; s)</p></div>
-    <div class="overview-card"><div class="label">Supported models</div><p>Unconditional IID/Markov and conditional variants</p></div>
-    <div class="overview-card"><div class="label">Main inputs</div><p>Sequence length n, window length r, threshold s, success probabilities</p></div>
-  </div>
-  <div class="layout">
-    <aside class="toc"><h2>On this page</h2><a href="#single-window-web-app-note">Single-window web-app note</a><a href="#purpose-of-this-app">Purpose Of This App</a><a href="#main-inputs">Main Inputs</a><a href="#what-the-result-means">What The Result Means</a><a href="#step-by-step-example-1-unconditional-iid-case">Step-By-Step Example 1: Unconditional Iid Case</a><a href="#step-by-step-example-2-detecting-a-local-cluster">Step-By-Step Example 2: Detecting A Local Cluster</a><a href="#step-by-step-example-3-small-window-example">Step-By-Step Example 3: Small Window Example</a><a href="#conditional-scan-statistic-if-your-version-has-it">Conditional Scan Statistic, If Your Version Has It</a><a href="#eigvalue-vector-button">Eigvalue/Vector Button</a><a href="#clear-all-items">Clear All Items</a><a href="#common-mistakes">Common Mistakes</a><a href="#quick-reference">Quick Reference</a><div class="source-files"><h2>MATLAB routines</h2><span>fmci_scan_statistic_Unconditional.m</span><span>fmci_scan_statistic_Unconditional_eig.m</span><span>fmci_scan_statistic_conditional.m</span></div></aside>
-    <article class="guide"><section class="section-card" id="single-window-web-app-note">
-<details open>
+<div class="overview-grid">
+<div class="overview-card"><div class="label">What it computes</div><p>P(Sₙ(r) &lt; s)</p></div>
+<div class="overview-card"><div class="label">Supported models</div><p>Unconditional IID/Markov and conditional variants</p></div>
+<div class="overview-card"><div class="label">Main inputs</div><p>Sequence length n, window length r, threshold s, success probabilities</p></div>
+</div>
+<div class="layout">
+<aside class="toc"><h2>On this page</h2><a href="#single-window-web-app-note">Single-window web-app note</a><a href="#purpose-of-this-app">Purpose Of This App</a><a href="#main-inputs">Main Inputs</a><a href="#what-the-result-means">What The Result Means</a><a href="#step-by-step-example-1-unconditional-iid-case">Step-By-Step Example 1: Unconditional Iid Case</a><a href="#step-by-step-example-2-detecting-a-local-cluster">Step-By-Step Example 2: Detecting A Local Cluster</a><a href="#step-by-step-example-3-small-window-example">Step-By-Step Example 3: Small Window Example</a><a href="#conditional-scan-statistic-if-your-version-has-it">Conditional Scan Statistic, If Your Version Has It</a><a href="#eigvalue-vector-button">Eigvalue/Vector Button</a><a href="#clear-all-items">Clear All Items</a><a href="#common-mistakes">Common Mistakes</a><a href="#quick-reference">Quick Reference</a><div class="source-files"><h2>MATLAB routines</h2><span>fmci_scan_statistic_Unconditional.m</span><span>fmci_scan_statistic_Unconditional_eig.m</span><span>fmci_scan_statistic_conditional.m</span></div></aside>
+<article class="guide"><section class="section-card" id="single-window-web-app-note">
+<details open="">
 <summary>Single-window web-app note</summary>
 <div class="section-body"><p>The original desktop instructions sometimes refer to buttons that open separate input windows. In this single-window web version, enter those same values directly in the text boxes or tables on the current tab. The mathematical meaning of the inputs and outputs is unchanged.</p></div>
 </details>
 </section><section class="section-card" id="purpose-of-this-app">
-<details open>
+<details open="">
 <summary>Purpose Of This App</summary>
 <div class="section-body"><p>This app computes exact scan statistic probabilities for a binary sequence. The sequence contains two possible outcomes:</p>
 <pre class="formula-block">    0 = failure
@@ -282,9 +283,9 @@
     contains s or more successes.</pre></div>
 </details>
 </section>
-      <nav class="page-nav"><a href="number-of-patterns.html"><small>Previous module</small><strong>← Number of Patterns</strong></a><a href="longest-run.html"><small>Next module</small><strong>Longest Run →</strong></a></nav>
-    </article>
-  </div>
+<nav class="page-nav"><a href="number-of-patterns.html"><small>Previous module</small><strong>← Number of Patterns</strong></a><a href="longest-run.html"><small>Next module</small><strong>Longest Run →</strong></a></nav>
+</article>
+</div>
 </main>
 <footer class="footer">FMCI Web App module guide · <a href="../index.html">Return to the home page</a></footer>
 </body>

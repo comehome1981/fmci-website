@@ -1,48 +1,49 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Compute exact p-values, Type I error, Type II error, and power for Cochran&#x27;s test using FMCI.">
-<title>Cochran&#x27;s Test — FMCI Web App Guide</title>
-<link rel="stylesheet" href="../assets/module-pages.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Compute exact p-values, Type I error, Type II error, and power for Cochran's test using FMCI." name="description"/>
+<title>Cochran's Test — FMCI Web App Guide</title>
+<link href="../assets/module-pages.css" rel="stylesheet"/>
 </head>
 <body>
 <header class="topbar">
-  <nav class="nav">
-    <a class="brand" href="../index.html"><span class="brand-mark"></span><span>FMCI Web App</span></a>
-    <div class="navlinks"><a href="../index.html">Home</a><a href="../index.html#methods">All Modules</a><a class="launch" href="https://sites.google.com/view/tlwu/Cochran_learn_more" target="_blank" rel="noopener noreferrer">Launch App ↗</a></div>
-  </nav>
+<nav class="nav">
+<a class="brand" href="../index.html"><span class="brand-mark"></span><span>FMCI Web App</span></a>
+<div class="navlinks"><a href="../index.html">Home</a><a href="../index.html#methods">All Modules</a><a class="launch" href="https://desktop-6ub17o1.taila08346.ts.net/webapps/home/session.html?app=WuWebAppDesignerWeb2" rel="noopener noreferrer" target="_blank">Launch App ↗</a></div>
+</nav>
 </header>
 <section class="hero">
-  <div class="hero-inner">
-    <div>
-      <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#methods">Modules</a> / Cochran&#x27;s Test</div>
-      <div class="eyebrow">Exact dichotomous-response inference</div>
-      <div class="title-row"><div class="module-icon"><svg viewBox="0 0 24 24"><rect x="4" y="12" width="3" height="8" rx="1" fill="currentColor" stroke="none"/><rect x="10.5" y="7" width="3" height="13" rx="1" fill="currentColor" stroke="none"/><rect x="17" y="3" width="3" height="17" rx="1" fill="currentColor" stroke="none"/></svg></div><h1>Cochran&#x27;s Test</h1></div>
-      <p class="hero-summary">Compute exact p-values, Type I error, Type II error, and power for Cochran&#x27;s test using FMCI.</p>
-      <div class="hero-actions"><a class="btn btn-primary" href="https://sites.google.com/view/tlwu/Cochran_learn_more" target="_blank" rel="noopener noreferrer">Open the Web App ↗</a><a class="btn btn-secondary" href="#guide">Read the guide ↓</a></div>
-    </div>
-    <aside class="formula-card"><div class="small">Core result</div><div class="formula">Exact tail probabilities at the observed critical value</div><div class="formula-note">Exact finite-sample calculations based on finite Markov chain imbedding.</div></aside>
-  </div>
+<div class="hero-inner">
+<div>
+<div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#methods">Modules</a> / Cochran's Test</div>
+<div class="eyebrow">Exact dichotomous-response inference</div>
+<div class="title-row"><div class="module-icon"><svg viewbox="0 0 24 24"><rect fill="currentColor" height="8" rx="1" stroke="none" width="3" x="4" y="12"></rect><rect fill="currentColor" height="13" rx="1" stroke="none" width="3" x="10.5" y="7"></rect><rect fill="currentColor" height="17" rx="1" stroke="none" width="3" x="17" y="3"></rect></svg></div><h1>Cochran's Test</h1></div>
+<p class="hero-summary">Compute exact p-values, Type I error, Type II error, and power for Cochran's test using FMCI.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="https://desktop-6ub17o1.taila08346.ts.net/webapps/home/session.html?app=WuWebAppDesignerWeb2" rel="noopener noreferrer" target="_blank">Open the Web App ↗</a><a class="btn btn-secondary" href="#guide">Read the guide ↓</a></div>
+</div>
+<aside class="formula-card"><div class="small">Core result</div><div class="formula">Exact tail probabilities at the observed critical value</div><div class="formula-note">Exact finite-sample calculations based on finite Markov chain imbedding.</div></aside>
+</div>
 </section>
 <main class="content" id="guide">
-  <div class="overview-grid">
-    <div class="overview-card"><div class="label">What it computes</div><p>Exact tail probabilities at the observed critical value</p></div>
-    <div class="overview-card"><div class="label">Supported models</div><p>Observed K-by-b binary matrix; optional alternative-hypothesis probability matrix</p></div>
-    <div class="overview-card"><div class="label">Main inputs</div><p>Observed matrix X₀ and, when needed, alternative matrix P</p></div>
-  </div>
-  <div class="layout">
-    <aside class="toc"><h2>On this page</h2><a href="#single-window-web-app-note">Single-window web-app note</a><a href="#purpose">Purpose</a><a href="#data-layout">Data layout</a><a href="#inputs">Inputs</a><a href="#what-the-app-computes">What the app computes</a><a href="#step-by-step-use">Step-by-step use</a><a href="#example-1-exact-p-value-only">Example 1: exact p-value only</a><a href="#example-2-type-ii-error-and-power">Example 2: Type II error and power</a><a href="#common-mistakes">Common mistakes</a><a href="#clearing-the-app">Clearing the app</a><div class="source-files"><h2>MATLAB routines</h2><span>fmci_cochran_pvalue.m</span><span>fmci_cochran_tail_prob.m</span><span>fmci_cochran_type1_error.m</span><span>fmci_cochran_type2_error.m</span></div></aside>
-    <article class="guide"><section class="section-card" id="single-window-web-app-note">
-<details open>
+<div class="overview-grid">
+<div class="overview-card"><div class="label">What it computes</div><p>Exact tail probabilities at the observed critical value</p></div>
+<div class="overview-card"><div class="label">Supported models</div><p>Observed K-by-b binary matrix; optional alternative-hypothesis probability matrix</p></div>
+<div class="overview-card"><div class="label">Main inputs</div><p>Observed matrix X₀ and, when needed, alternative matrix P</p></div>
+</div>
+<div class="layout">
+<aside class="toc"><h2>On this page</h2><a href="#single-window-web-app-note">Single-window web-app note</a><a href="#purpose">Purpose</a><a href="#data-layout">Data layout</a><a href="#inputs">Inputs</a><a href="#what-the-app-computes">What the app computes</a><a href="#step-by-step-use">Step-by-step use</a><a href="#example-1-exact-p-value-only">Example 1: exact p-value only</a><a href="#example-2-type-ii-error-and-power">Example 2: Type II error and power</a><a href="#common-mistakes">Common mistakes</a><a href="#clearing-the-app">Clearing the app</a><div class="source-files"><h2>MATLAB routines</h2><span>fmci_cochran_pvalue.m</span><span>fmci_cochran_tail_prob.m</span><span>fmci_cochran_type1_error.m</span><span>fmci_cochran_type2_error.m</span></div></aside>
+<article class="guide"><section class="section-card" id="single-window-web-app-note">
+<details open="">
 <summary>Single-window web-app note</summary>
 <div class="section-body"><p>The original desktop instructions sometimes refer to buttons that open separate input windows. In this single-window web version, enter those same values directly in the text boxes or tables on the current tab. The mathematical meaning of the inputs and outputs is unchanged.</p></div>
 </details>
 </section><section class="section-card" id="purpose">
-<details open>
+<details open="">
 <summary>Purpose</summary>
-<div class="section-body"><p>This app computes exact probabilities for Cochran&#x27;s test for dichotomous 0/1 responses using finite Markov chain imbedding (FMCI).</p>
+<div class="section-body"><p>This app computes exact probabilities for Cochran's test for dichotomous 0/1 responses using finite Markov chain imbedding (FMCI).</p>
 <pre class="formula-block">The app can compute:
     1. exact p-value for an observed 0/1 matrix X0
     2. exact Type I error at the observed critical value
@@ -170,9 +171,9 @@
     results output</pre></div>
 </details>
 </section>
-      <nav class="page-nav"><a href="matching-probability.html"><small>Previous module</small><strong>← Matching Probability</strong></a><a href="waiting-time.html"><small>Next module</small><strong>Waiting Time →</strong></a></nav>
-    </article>
-  </div>
+<nav class="page-nav"><a href="matching-probability.html"><small>Previous module</small><strong>← Matching Probability</strong></a><a href="waiting-time.html"><small>Next module</small><strong>Waiting Time →</strong></a></nav>
+</article>
+</div>
 </main>
 <footer class="footer">FMCI Web App module guide · <a href="../index.html">Return to the home page</a></footer>
 </body>

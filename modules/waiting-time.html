@@ -1,46 +1,47 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Compute the exact probability that the r-th occurrence of one or more patterns has not occurred by time n.">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Compute the exact probability that the r-th occurrence of one or more patterns has not occurred by time n." name="description"/>
 <title>Waiting Time — FMCI Web App Guide</title>
-<link rel="stylesheet" href="../assets/module-pages.css">
+<link href="../assets/module-pages.css" rel="stylesheet"/>
 </head>
 <body>
 <header class="topbar">
-  <nav class="nav">
-    <a class="brand" href="../index.html"><span class="brand-mark"></span><span>FMCI Web App</span></a>
-    <div class="navlinks"><a href="../index.html">Home</a><a href="../index.html#methods">All Modules</a><a class="launch" href="https://unshaven-energy-verify.ngrok-free.dev/webapps/home/session.html?app=WuWebAppDesignerWeb2" target="_blank" rel="noopener noreferrer">Launch App ↗</a></div>
-  </nav>
+<nav class="nav">
+<a class="brand" href="../index.html"><span class="brand-mark"></span><span>FMCI Web App</span></a>
+<div class="navlinks"><a href="../index.html">Home</a><a href="../index.html#methods">All Modules</a><a class="launch" href="https://desktop-6ub17o1.taila08346.ts.net/webapps/home/session.html?app=WuWebAppDesignerWeb2" rel="noopener noreferrer" target="_blank">Launch App ↗</a></div>
+</nav>
 </header>
 <section class="hero">
-  <div class="hero-inner">
-    <div>
-      <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#methods">Modules</a> / Waiting Time</div>
-      <div class="eyebrow">Pattern occurrence timing</div>
-      <div class="title-row"><div class="module-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h1>Waiting Time</h1></div>
-      <p class="hero-summary">Compute the exact probability that the r-th occurrence of one or more patterns has not occurred by time n.</p>
-      <div class="hero-actions"><a class="btn btn-primary" href="https://unshaven-energy-verify.ngrok-free.dev/webapps/home/session.html?app=WuWebAppDesignerWeb2" target="_blank" rel="noopener noreferrer">Open the Web App ↗</a><a class="btn btn-secondary" href="#guide">Read the guide ↓</a></div>
-    </div>
-    <aside class="formula-card"><div class="small">Core result</div><div class="formula">P(Wᵣ &gt; n) = P(Xₙ &lt; r)</div><div class="formula-note">Exact finite-sample calculations based on finite Markov chain imbedding.</div></aside>
-  </div>
+<div class="hero-inner">
+<div>
+<div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#methods">Modules</a> / Waiting Time</div>
+<div class="eyebrow">Pattern occurrence timing</div>
+<div class="title-row"><div class="module-icon"><svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></div><h1>Waiting Time</h1></div>
+<p class="hero-summary">Compute the exact probability that the r-th occurrence of one or more patterns has not occurred by time n.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="https://desktop-6ub17o1.taila08346.ts.net/webapps/home/session.html?app=WuWebAppDesignerWeb2" rel="noopener noreferrer" target="_blank">Open the Web App ↗</a><a class="btn btn-secondary" href="#guide">Read the guide ↓</a></div>
+</div>
+<aside class="formula-card"><div class="small">Core result</div><div class="formula">P(Wᵣ &gt; n) = P(Xₙ &lt; r)</div><div class="formula-note">Exact finite-sample calculations based on finite Markov chain imbedding.</div></aside>
+</div>
 </section>
 <main class="content" id="guide">
-  <div class="overview-grid">
-    <div class="overview-card"><div class="label">What it computes</div><p>P(Wᵣ &gt; n) = P(Xₙ &lt; r)</p></div>
-    <div class="overview-card"><div class="label">Supported models</div><p>Independent or Markov-dependent; overlapping or non-overlapping counting</p></div>
-    <div class="overview-card"><div class="label">Main inputs</div><p>States, patterns, r, n, probabilities, counting option</p></div>
-  </div>
-  <div class="layout">
-    <aside class="toc"><h2>On this page</h2><a href="#single-window-web-app-note">Single-window web-app note</a><a href="#purpose">Purpose</a><a href="#main-inputs">Main Inputs</a><a href="#over-non-over-counting">Over / Non_Over Counting</a><a href="#dependency-type">Dependency Type</a><a href="#how-to-use-the-app-independent-case">How To Use The App: Independent Case</a><a href="#how-to-use-the-app-markov-dependent-case">How To Use The App: Markov Dependent Case</a><a href="#results-panel">Results Panel</a><a href="#view-the-pattern-s">View The Pattern(S)</a><a href="#mean-button">Mean Button</a><a href="#eigvalue-vector-button">Eigvalue/Vector Button</a><a href="#clear-all-items">Clear All Items</a><a href="#common-mistakes-to-avoid">Common Mistakes To Avoid</a><a href="#function-used-by-the-app">Function Used By The App</a><div class="source-files"><h2>MATLAB routines</h2><span>Waiting_time.m</span><span>Waiting_time_eig.m</span></div></aside>
-    <article class="guide"><section class="section-card" id="single-window-web-app-note">
-<details open>
+<div class="overview-grid">
+<div class="overview-card"><div class="label">What it computes</div><p>P(Wᵣ &gt; n) = P(Xₙ &lt; r)</p></div>
+<div class="overview-card"><div class="label">Supported models</div><p>Independent or Markov-dependent; overlapping or non-overlapping counting</p></div>
+<div class="overview-card"><div class="label">Main inputs</div><p>States, patterns, r, n, probabilities, counting option</p></div>
+</div>
+<div class="layout">
+<aside class="toc"><h2>On this page</h2><a href="#single-window-web-app-note">Single-window web-app note</a><a href="#purpose">Purpose</a><a href="#main-inputs">Main Inputs</a><a href="#over-non-over-counting">Over / Non_Over Counting</a><a href="#dependency-type">Dependency Type</a><a href="#how-to-use-the-app-independent-case">How To Use The App: Independent Case</a><a href="#how-to-use-the-app-markov-dependent-case">How To Use The App: Markov Dependent Case</a><a href="#results-panel">Results Panel</a><a href="#view-the-pattern-s">View The Pattern(S)</a><a href="#mean-button">Mean Button</a><a href="#eigvalue-vector-button">Eigvalue/Vector Button</a><a href="#clear-all-items">Clear All Items</a><a href="#common-mistakes-to-avoid">Common Mistakes To Avoid</a><a href="#function-used-by-the-app">Function Used By The App</a><div class="source-files"><h2>MATLAB routines</h2><span>Waiting_time.m</span><span>Waiting_time_eig.m</span></div></aside>
+<article class="guide"><section class="section-card" id="single-window-web-app-note">
+<details open="">
 <summary>Single-window web-app note</summary>
 <div class="section-body"><p>The original desktop instructions sometimes refer to buttons that open separate input windows. In this single-window web version, enter those same values directly in the text boxes or tables on the current tab. The mathematical meaning of the inputs and outputs is unchanged.</p></div>
 </details>
 </section><section class="section-card" id="purpose">
-<details open>
+<details open="">
 <summary>Purpose</summary>
 <div class="section-body"><p>This app computes probabilities for the waiting time until patterns occur in a sequence of m-state trials.</p>
 <p>Let W_r be the waiting time until the r-th occurrence of any entered pattern. The app calculates:</p>
@@ -303,9 +304,9 @@ probability that pattern 1 1 has not occurred by time 20?</pre>
 <pre class="formula-block">    1 - probGTn = P(W_r &lt;= n)</pre></div>
 </details>
 </section>
-      <nav class="page-nav"><a href="cochran-test.html"><small>Previous module</small><strong>← Cochran&#x27;s Test</strong></a><a href="number-of-patterns.html"><small>Next module</small><strong>Number of Patterns →</strong></a></nav>
-    </article>
-  </div>
+<nav class="page-nav"><a href="cochran-test.html"><small>Previous module</small><strong>← Cochran's Test</strong></a><a href="number-of-patterns.html"><small>Next module</small><strong>Number of Patterns →</strong></a></nav>
+</article>
+</div>
 </main>
 <footer class="footer">FMCI Web App module guide · <a href="../index.html">Return to the home page</a></footer>
 </body>

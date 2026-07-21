@@ -1,46 +1,47 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Calculate exact probabilities for the number of occurrences of one or more patterns in a finite sequence.">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Calculate exact probabilities for the number of occurrences of one or more patterns in a finite sequence." name="description"/>
 <title>Number of Patterns — FMCI Web App Guide</title>
-<link rel="stylesheet" href="../assets/module-pages.css">
+<link href="../assets/module-pages.css" rel="stylesheet"/>
 </head>
 <body>
 <header class="topbar">
-  <nav class="nav">
-    <a class="brand" href="../index.html"><span class="brand-mark"></span><span>FMCI Web App</span></a>
-    <div class="navlinks"><a href="../index.html">Home</a><a href="../index.html#methods">All Modules</a><a class="launch" href="https://unshaven-energy-verify.ngrok-free.dev/webapps/home/session.html?app=WuWebAppDesignerWeb2" target="_blank" rel="noopener noreferrer">Launch App ↗</a></div>
-  </nav>
+<nav class="nav">
+<a class="brand" href="../index.html"><span class="brand-mark"></span><span>FMCI Web App</span></a>
+<div class="navlinks"><a href="../index.html">Home</a><a href="../index.html#methods">All Modules</a><a class="launch" href="https://desktop-6ub17o1.taila08346.ts.net/webapps/home/session.html?app=WuWebAppDesignerWeb2" rel="noopener noreferrer" target="_blank">Launch App ↗</a></div>
+</nav>
 </header>
 <section class="hero">
-  <div class="hero-inner">
-    <div>
-      <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#methods">Modules</a> / Number of Patterns</div>
-      <div class="eyebrow">Pattern-count distribution</div>
-      <div class="title-row"><div class="module-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="6" r="1.4" fill="currentColor" stroke="none"/><circle cx="18" cy="6" r="1.4" fill="currentColor" stroke="none"/><circle cx="6" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="18" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="6" cy="18" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="18" r="1.4" fill="currentColor" stroke="none"/><circle cx="18" cy="18" r="1.4" fill="currentColor" stroke="none"/></svg></div><h1>Number of Patterns</h1></div>
-      <p class="hero-summary">Calculate exact probabilities for the number of occurrences of one or more patterns in a finite sequence.</p>
-      <div class="hero-actions"><a class="btn btn-primary" href="https://unshaven-energy-verify.ngrok-free.dev/webapps/home/session.html?app=WuWebAppDesignerWeb2" target="_blank" rel="noopener noreferrer">Open the Web App ↗</a><a class="btn btn-secondary" href="#guide">Read the guide ↓</a></div>
-    </div>
-    <aside class="formula-card"><div class="small">Core result</div><div class="formula">P(Nₙ &lt; r) = P(Wᵣ &gt; n)</div><div class="formula-note">Exact finite-sample calculations based on finite Markov chain imbedding.</div></aside>
-  </div>
+<div class="hero-inner">
+<div>
+<div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#methods">Modules</a> / Number of Patterns</div>
+<div class="eyebrow">Pattern-count distribution</div>
+<div class="title-row"><div class="module-icon"><svg viewbox="0 0 24 24"><circle cx="6" cy="6" fill="currentColor" r="1.4" stroke="none"></circle><circle cx="12" cy="6" fill="currentColor" r="1.4" stroke="none"></circle><circle cx="18" cy="6" fill="currentColor" r="1.4" stroke="none"></circle><circle cx="6" cy="12" fill="currentColor" r="1.4" stroke="none"></circle><circle cx="12" cy="12" fill="currentColor" r="1.4" stroke="none"></circle><circle cx="18" cy="12" fill="currentColor" r="1.4" stroke="none"></circle><circle cx="6" cy="18" fill="currentColor" r="1.4" stroke="none"></circle><circle cx="12" cy="18" fill="currentColor" r="1.4" stroke="none"></circle><circle cx="18" cy="18" fill="currentColor" r="1.4" stroke="none"></circle></svg></div><h1>Number of Patterns</h1></div>
+<p class="hero-summary">Calculate exact probabilities for the number of occurrences of one or more patterns in a finite sequence.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="https://desktop-6ub17o1.taila08346.ts.net/webapps/home/session.html?app=WuWebAppDesignerWeb2" rel="noopener noreferrer" target="_blank">Open the Web App ↗</a><a class="btn btn-secondary" href="#guide">Read the guide ↓</a></div>
+</div>
+<aside class="formula-card"><div class="small">Core result</div><div class="formula">P(Nₙ &lt; r) = P(Wᵣ &gt; n)</div><div class="formula-note">Exact finite-sample calculations based on finite Markov chain imbedding.</div></aside>
+</div>
 </section>
 <main class="content" id="guide">
-  <div class="overview-grid">
-    <div class="overview-card"><div class="label">What it computes</div><p>P(Nₙ &lt; r) = P(Wᵣ &gt; n)</p></div>
-    <div class="overview-card"><div class="label">Supported models</div><p>Independent or Markov-dependent; multiple patterns supported</p></div>
-    <div class="overview-card"><div class="label">Main inputs</div><p>State count, patterns, threshold r, sequence length n, probabilities</p></div>
-  </div>
-  <div class="layout">
-    <aside class="toc"><h2>On this page</h2><a href="#single-window-web-app-note">Single-window web-app note</a><a href="#purpose-of-this-app">Purpose Of This App</a><a href="#main-inputs">Main Inputs</a><a href="#pattern-entry-format">Pattern Entry Format</a><a href="#counting-options-over-and-non-over">Counting Options: Over And Non-Over</a><a href="#dependency-options">Dependency Options</a><a href="#step-by-step-independent-one-pattern-example">Step-By-Step: Independent One-Pattern Example</a><a href="#step-by-step-independent-r-2-example">STEP-BY-STEP: INDEPENDENT r = 2 EXAMPLE</a><a href="#step-by-step-multiple-pattern-example">Step-By-Step: Multiple-Pattern Example</a><a href="#step-by-step-markov-dependent-example">Step-By-Step: Markov Dependent Example</a><a href="#step-by-step-four-state-dna-style-example">Step-By-Step: Four-State Dna-Style Example</a><a href="#over-vs-non-over-example-in-detail">Over Vs Non-Over Example In Detail</a><a href="#results-panel">Results Panel</a><a href="#eigvalue-vector-button">Eigvalue/Vector Button</a><a href="#clear-all-items">Clear All Items</a><a href="#common-mistakes">Common Mistakes</a><a href="#quick-reference">Quick Reference</a><div class="source-files"><h2>MATLAB routines</h2><span>r_mkv_over_clear_claud.m</span></div></aside>
-    <article class="guide"><section class="section-card" id="single-window-web-app-note">
-<details open>
+<div class="overview-grid">
+<div class="overview-card"><div class="label">What it computes</div><p>P(Nₙ &lt; r) = P(Wᵣ &gt; n)</p></div>
+<div class="overview-card"><div class="label">Supported models</div><p>Independent or Markov-dependent; multiple patterns supported</p></div>
+<div class="overview-card"><div class="label">Main inputs</div><p>State count, patterns, threshold r, sequence length n, probabilities</p></div>
+</div>
+<div class="layout">
+<aside class="toc"><h2>On this page</h2><a href="#single-window-web-app-note">Single-window web-app note</a><a href="#purpose-of-this-app">Purpose Of This App</a><a href="#main-inputs">Main Inputs</a><a href="#pattern-entry-format">Pattern Entry Format</a><a href="#counting-options-over-and-non-over">Counting Options: Over And Non-Over</a><a href="#dependency-options">Dependency Options</a><a href="#step-by-step-independent-one-pattern-example">Step-By-Step: Independent One-Pattern Example</a><a href="#step-by-step-independent-r-2-example">STEP-BY-STEP: INDEPENDENT r = 2 EXAMPLE</a><a href="#step-by-step-multiple-pattern-example">Step-By-Step: Multiple-Pattern Example</a><a href="#step-by-step-markov-dependent-example">Step-By-Step: Markov Dependent Example</a><a href="#step-by-step-four-state-dna-style-example">Step-By-Step: Four-State Dna-Style Example</a><a href="#over-vs-non-over-example-in-detail">Over Vs Non-Over Example In Detail</a><a href="#results-panel">Results Panel</a><a href="#eigvalue-vector-button">Eigvalue/Vector Button</a><a href="#clear-all-items">Clear All Items</a><a href="#common-mistakes">Common Mistakes</a><a href="#quick-reference">Quick Reference</a><div class="source-files"><h2>MATLAB routines</h2><span>r_mkv_over_clear_claud.m</span></div></aside>
+<article class="guide"><section class="section-card" id="single-window-web-app-note">
+<details open="">
 <summary>Single-window web-app note</summary>
 <div class="section-body"><p>The original desktop instructions sometimes refer to buttons that open separate input windows. In this single-window web version, enter those same values directly in the text boxes or tables on the current tab. The mathematical meaning of the inputs and outputs is unchanged.</p></div>
 </details>
 </section><section class="section-card" id="purpose-of-this-app">
-<details open>
+<details open="">
 <summary>Purpose Of This App</summary>
 <div class="section-body"><p>This app computes exact probabilities for the number of occurrences of one or more patterns in a finite sequence. The sequence has S possible states, labeled 1, 2, ..., S. A pattern is a finite string of these state labels.</p>
 <p class="guide-label">The main probability reported by the app is:</p>
@@ -400,9 +401,9 @@
 <pre class="formula-block">    1 - Probability = P(N_n &gt;= r) = P(W_r &lt;= n)</pre></div>
 </details>
 </section>
-      <nav class="page-nav"><a href="waiting-time.html"><small>Previous module</small><strong>← Waiting Time</strong></a><a href="scan-statistic.html"><small>Next module</small><strong>Scan Statistic →</strong></a></nav>
-    </article>
-  </div>
+<nav class="page-nav"><a href="waiting-time.html"><small>Previous module</small><strong>← Waiting Time</strong></a><a href="scan-statistic.html"><small>Next module</small><strong>Scan Statistic →</strong></a></nav>
+</article>
+</div>
 </main>
 <footer class="footer">FMCI Web App module guide · <a href="../index.html">Return to the home page</a></footer>
 </body>
